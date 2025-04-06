@@ -31,9 +31,6 @@ export class S3BucketProvider {
   async uploadSingleFile({ file }: { file: Express.Multer.File }) {
     try {
       const key = uuidv4();
-      console.log('Buffer size:', file.buffer.length);
-      console.log('client', this.client);
-      console.log('start');
       await this.uploadToS3({
         key,
         buffer: file.buffer,

@@ -61,7 +61,6 @@ export default class MediaController {
     res: ServerResponse,
     ctx: RequestContext<unknown>,
   ): Promise<void> {
-    console.log('start');
     const data = await mediaService.updateFile(ctx);
     if (!data) {
       res.statusMessage = 'File Not Found';

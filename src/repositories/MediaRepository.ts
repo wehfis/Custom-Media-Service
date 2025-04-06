@@ -5,7 +5,6 @@ import IRepository from './IRepository';
 
 export default class MediaRepository implements IRepository<IMediaModel> {
   async findById(id: string): Promise<IMediaModel | false> {
-    console.log('query:', id);
     const query = {
       text: `
             SELECT * 
@@ -41,7 +40,6 @@ export default class MediaRepository implements IRepository<IMediaModel> {
 
   async create(payload: IPostMediaDto): Promise<IMediaModel> {
     const { id, fileName, fileSize, mimeType } = payload;
-    console.log('payload:', payload);
     const query = {
       text: `
             INSERT INTO media_metadata(id, file_name, file_size, mime_type) 
@@ -62,8 +60,6 @@ export default class MediaRepository implements IRepository<IMediaModel> {
     payload: IUpdateMediaDto,
   ): Promise<IMediaModel | false> {
     const { id: newId, fileName, fileSize, mimeType } = payload;
-    console.log('update:', payload);
-    console.log('update:', oldId);
     const query = {
       text: `
             UPDATE media_metadata
