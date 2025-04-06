@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS public.media_metadata (
+	id VARCHAR(255) UNIQUE NOT NULL,
+    file_name VARCHAR(255) NOT NULL,
+    file_size BIGINT NOT NULL,
+    mime_type VARCHAR(100) NOT NULL,
+    created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+    updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);

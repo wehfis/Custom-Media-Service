@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "42ec8761-0fab-4ce3-b057-445f133644b8",
+		"name": "Custom-Media-Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25583746"
+	},
+	"item": [
+		{
+			"name": "Get media",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:8000/media",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"media"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get media by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/media/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"media",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "892d0c60-b8bc-4556-8a0e-9b96701552b2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload media",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "postman-cloud:///1eef0568-6721-4060-8b13-da964b6c41d6"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/media",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"media"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update media",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:8000/media/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"media",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "892d0c60-b8bc-4556-8a0e-9b96701552b2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete media by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/media/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"media",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "892d0c60-b8bc-4556-8a0e-9b96701552b2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
